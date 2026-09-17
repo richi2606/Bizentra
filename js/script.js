@@ -62,67 +62,85 @@ document.addEventListener("DOMContentLoaded", () => {
     consultoria: {
       title: "Consultoría y asesoría",
       content: `
-        <p>Brindamos consultoría, asesoría, planeación, dirección, administración, ejecución y fiscalización para apoyar a empresas, personas físicas y morales.</p>
+        <p>Brindamos consultoría, asesoría, planeación, dirección, administración, ejecución y fiscalización para apoyar a empresas, personas físicas y morales en la toma de decisiones estratégicas y la optimización de sus procesos.</p>
+        <p>Este servicio permite fortalecer la operación empresarial, mejorar la administración financiera y diseñar soluciones prácticas para cada necesidad institucional.</p>
         <ul>
-          <li>Servicios profesionales, financieros y administrativos.</li>
-          <li>Asesoría para empresas nacionales y extranjeras.</li>
-          <li>Soluciones orientadas a la operación, control y competitividad.</li>
+          <li>Asesoría profesional en administración, planeación y ejecución.</li>
+          <li>Soporte para empresas nacionales y extranjeras en procesos comerciales.</li>
+          <li>Soluciones orientadas a la eficiencia, control y competitividad.</li>
+          <li>Análisis de necesidades para mejorar la gestión operativa y financiera.</li>
         </ul>
+        <a href="index.html#contacto" class="modal-cta">Solicitar servicio</a>
       `,
     },
     "recursos-humanos": {
       title: "Recursos humanos",
       content: `
-        <p>El reclutamiento, selección, contratación, entrenamiento y capacitación de personal, ya sea por sí o a través de terceros.</p>
+        <p>El reclutamiento, selección, contratación, entrenamiento y capacitación de personal se convierte en una herramienta clave para fortalecer cualquier organización, asegurando que cada talento cumpla con los objetivos del negocio.</p>
+        <p>Desde la identificación de perfiles hasta la incorporación del personal, desarrollamos procesos orientados a la productividad, la calidad y la adaptación operativa.</p>
         <ul>
-          <li>Selección y contratación de personal.</li>
-          <li>Capacitación y entrenamiento.</li>
-          <li>Subcontratación y estudios psicométricos.</li>
+          <li>Reclutamiento y selección de personal idóneo.</li>
+          <li>Entrenamiento y capacitación para mejorar desempeño.</li>
+          <li>Subcontratación y coordinación con terceros según la necesidad.</li>
+          <li>Estudios psicométricos para contratación y evaluación de perfiles.</li>
         </ul>
+        <a href="index.html#contacto" class="modal-cta">Solicitar servicio</a>
       `,
     },
     mercadotecnia: {
       title: "Relaciones públicas y mercadotecnia",
       content: `
-        <p>Desarrollamos estrategias de diseño, publicidad, mercadotecnia y medios de comunicación para fortalecer la presencia y el posicionamiento comercial.</p>
+        <p>Desarrollamos estrategias de diseño, publicidad, mercadotecnia y medios de comunicación para fortalecer la presencia comercial de la empresa y mantener una comunicación efectiva con su público objetivo.</p>
+        <p>Ayudamos a que cada iniciativa se traduzca en una mejor percepción de marca, mayor alcance y una estrategia comercial más alineada con los objetivos del negocio.</p>
         <ul>
-          <li>Diseño y publicidad.</li>
-          <li>Relaciones públicas y campañas promocionales.</li>
-          <li>Investigación de mercado y comunicación.</li>
+          <li>Diseño de campañas estratégicas y promocionales.</li>
+          <li>Relaciones públicas y posicionamiento de marca.</li>
+          <li>Investigación de mercado y análisis de oportunidades.</li>
+          <li>Gestión de comunicación en medios y plataformas relevantes.</li>
         </ul>
+        <a href="index.html#contacto" class="modal-cta">Solicitar servicio</a>
       `,
     },
     finanzas: {
       title: "Finanzas y administración",
       content: `
-        <p>Asesoría y consultoría técnica en materia industrial, administrativa, contable, mercantil, financiera y fiscal.</p>
+        <p>Asesoría y consultoría técnica en materia industrial, administrativa, contable, mercantil, financiera y fiscal para apoyar la estabilidad operativa y el cumplimiento normativo de cualquier organización.</p>
+        <p>Este servicio ofrece una visión integral del entorno financiero y administrativo, facilitando mejores decisiones y una gestión más sólida del negocio.</p>
         <ul>
-          <li>Asesoría administrativa y contable.</li>
-          <li>Consultoría financiera y fiscal.</li>
+          <li>Asesoría administrativa, contable y fiscal.</li>
+          <li>Consultoría financiera orientada a resultados.</li>
           <li>Supervisión técnica y administrativa.</li>
+          <li>Apoyo en control, organización y cumplimiento legal.</li>
         </ul>
+        <a href="index.html#contacto" class="modal-cta">Solicitar servicio</a>
       `,
     },
     comercio: {
       title: "Comercio exterior y logística",
       content: `
-        <p>Gestión en comercio exterior y doméstico, tráfico de mercancías, mediación y representación comercial.</p>
+        <p>Gestionamos procesos de comercio exterior y doméstico, tráfico de mercancías y mediación comercial para facilitar la operación de negocios en distintos escenarios de mercado.</p>
+        <p>La estructura de este servicio permite ofrecer apoyo estratégico en actividades comerciales y de representación con mayor claridad, coordinación y alcance.</p>
         <ul>
-          <li>Comisiones y mediaciones.</li>
-          <li>Comercio exterior y tráfico de mercancías.</li>
-          <li>Representación y gestión comercial.</li>
+          <li>Comisiones y mediaciones comerciales.</li>
+          <li>Gestión en comercio exterior y tráfico de mercancías.</li>
+          <li>Representación y apoyo a negociaciones.</li>
+          <li>Coordinación de operaciones para asegurar continuidad comercial.</li>
         </ul>
+        <a href="index.html#contacto" class="modal-cta">Solicitar servicio</a>
       `,
     },
     aplicaciones: {
       title: "Aplicaciones electrónicas",
       content: `
-        <p>Realizamos investigaciones de mercado y desarrollamos campañas para la creación, venta, difusión y administración de aplicaciones electrónicas.</p>
+        <p>Realizamos investigaciones de mercado y desarrollamos estrategias para la creación, venta, difusión y administración de aplicaciones electrónicas para dispositivos móviles, tabletas y computadoras.</p>
+        <p>La finalidad es apoyar la llegada de soluciones digitales con mayor valor para la operación, la promoción y la relación con clientes.</p>
         <ul>
-          <li>Investigación de mercado.</li>
-          <li>Promoción y administración digital.</li>
-          <li>Aplicaciones para dispositivos móviles, tabletas y computadoras.</li>
+          <li>Investigación de mercado y análisis de tendencia.</li>
+          <li>Promoción y administración digital de aplicaciones.</li>
+          <li>Apoyo para la difusión en dispositivos móviles y computadoras.</li>
+          <li>Diseño de estrategias para mejorar la presencia digital.</li>
         </ul>
+        <a href="index.html#contacto" class="modal-cta">Solicitar servicio</a>
       `,
     },
   };
