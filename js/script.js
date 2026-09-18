@@ -1,29 +1,52 @@
+(function () {
+  const savedTheme = localStorage.getItem("bizentra-theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const shouldUseDark = savedTheme === "dark" || (!savedTheme && prefersDark);
+
+  document.documentElement.classList.toggle("dark-mode", shouldUseDark);
+  document.body.classList.toggle("dark-mode", shouldUseDark);
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
   const toggleButton = document.querySelector(".theme-toggle");
-  const savedTheme = localStorage.getItem("bizentra-theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const icon = toggleButton?.querySelector("i");
+  const isDark = body.classList.contains("dark-mode") || document.documentElement.classList.contains("dark-mode");
 
-  if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-    body.classList.add("dark-mode");
-    toggleButton?.querySelector("i")?.classList.replace("fa-moon", "fa-sun");
+  if (isDark) {
+    icon?.classList.replace("fa-moon", "fa-sun");
   } else {
-    body.classList.remove("dark-mode");
-    toggleButton?.querySelector("i")?.classList.replace("fa-sun", "fa-moon");
+    icon?.classList.replace("fa-sun", "fa-moon");
   }
 
   toggleButton?.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
-    const isDark = body.classList.contains("dark-mode");
-    localStorage.setItem("bizentra-theme", isDark ? "dark" : "light");
-    const icon = toggleButton.querySelector("i");
+    document.documentElement.classList.toggle("dark-mode");
+    const isDarkNow = body.classList.contains("dark-mode");
+    localStorage.setItem("bizentra-theme", isDarkNow ? "dark" : "light");
 
-    if (isDark) {
-      icon.classList.replace("fa-moon", "fa-sun");
+    if (isDarkNow) {
+      icon?.classList.replace("fa-moon", "fa-sun");
     } else {
-      icon.classList.replace("fa-sun", "fa-moon");
+      icon?.classList.replace("fa-sun", "fa-moon");
     }
   });
+
+  const scrollProgress = document.querySelector(".scroll-progress");
+  const updateScrollProgress = () => {
+    if (!scrollProgress) return;
+
+    const doc = document.documentElement;
+    const bodyScrollTop = document.body.scrollTop || 0;
+    const scrollTop = doc.scrollTop || bodyScrollTop;
+    const height = doc.scrollHeight - doc.clientHeight;
+    const progress = height > 0 ? (scrollTop / height) * 100 : 0;
+
+    document.documentElement.style.setProperty("--progress-width", `${Math.min(Math.max(progress, 0), 100)}%`);
+  };
+
+  updateScrollProgress();
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
 
   const revealElements = document.querySelectorAll(".reveal");
   const revealObserver = new IntersectionObserver(
