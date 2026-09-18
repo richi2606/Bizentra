@@ -32,21 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const scrollProgress = document.querySelector(".scroll-progress");
+  const scrollProgressBar = document.querySelector(".scroll-progress-bar");
   const updateScrollProgress = () => {
-    if (!scrollProgress) return;
+    if (!scrollProgressBar) return;
 
-    const doc = document.documentElement;
-    const bodyScrollTop = document.body.scrollTop || 0;
-    const scrollTop = doc.scrollTop || bodyScrollTop;
-    const height = doc.scrollHeight - doc.clientHeight;
-    const progress = height > 0 ? (scrollTop / height) * 100 : 0;
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
+    const boundedProgress = Math.min(Math.max(progress, 0), 100);
 
-    document.documentElement.style.setProperty("--progress-width", `${Math.min(Math.max(progress, 0), 100)}%`);
+    scrollProgressBar.style.width = `${boundedProgress}%`;
   };
 
   updateScrollProgress();
   window.addEventListener("scroll", updateScrollProgress, { passive: true });
+  window.addEventListener("resize", updateScrollProgress);
 
   const revealElements = document.querySelectorAll(".reveal");
   const revealObserver = new IntersectionObserver(
