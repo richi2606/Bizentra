@@ -1,18 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
   const toggleButton = document.querySelector(".theme-toggle");
+  const savedTheme = localStorage.getItem("bizentra-theme");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-  if (prefersDark) {
+  if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
     body.classList.add("dark-mode");
     toggleButton?.querySelector("i")?.classList.replace("fa-moon", "fa-sun");
+  } else {
+    body.classList.remove("dark-mode");
+    toggleButton?.querySelector("i")?.classList.replace("fa-sun", "fa-moon");
   }
 
   toggleButton?.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
+    const isDark = body.classList.contains("dark-mode");
+    localStorage.setItem("bizentra-theme", isDark ? "dark" : "light");
     const icon = toggleButton.querySelector("i");
 
-    if (body.classList.contains("dark-mode")) {
+    if (isDark) {
       icon.classList.replace("fa-moon", "fa-sun");
     } else {
       icon.classList.replace("fa-sun", "fa-moon");

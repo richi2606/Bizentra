@@ -132,12 +132,34 @@ body.dark-mode .site-header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.8rem;
 }
 
 .brand img {
-  width: 220px;
+  width: 120px;
   height: auto;
   filter: drop-shadow(0 10px 24px rgba(15, 23, 42, 0.12));
+}
+
+.brand-text {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.08em;
+  color: var(--text);
+}
+
+.brand-name {
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.brand-subname {
+  font-size: 0.72rem;
+  font-weight: 700;
+  opacity: 0.82;
 }
 
 .main-nav {
@@ -498,6 +520,17 @@ body.dark-mode .hero-panel {
   padding: 5rem 0 3rem;
 }
 
+.hero-page {
+  background: radial-gradient(circle at top left, rgba(13, 110, 184, 0.16), transparent 35%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.25), rgba(237, 244, 255, 0.7));
+  border-radius: 0 0 30px 30px;
+}
+
+body.dark-mode .hero-page {
+  background: radial-gradient(circle at top left, rgba(124, 192, 255, 0.14), transparent 35%),
+    linear-gradient(180deg, rgba(16, 35, 54, 0.32), rgba(9, 21, 33, 0.85));
+}
+
 .narrow {
   max-width: 880px;
 }
@@ -698,6 +731,12 @@ body.dark-mode .hero-panel {
   background: var(--footer);
   color: var(--footer-text);
   padding: 4.5rem 0 2.5rem;
+}
+
+.privacy-link {
+  color: var(--footer-text);
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
 }
 
 .footer-grid {
