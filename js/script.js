@@ -171,6 +171,48 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="index.html#contacto" class="modal-cta">Solicitar servicio</a>
       `,
     },
+    representacion: {
+      title: "Representación comercial",
+      content: `
+        <p>Apoyamos a las empresas en la gestión y coordinación de comisiones, mediaciones, representaciones y negociaciones comerciales para fortalecer su presencia en el mercado.</p>
+        <p>Este servicio facilita el acercamiento con socios, clientes y proveedores para optimizar la operación y la relación comercial.</p>
+        <ul>
+          <li>Gestión de comisiones y mediaciones comerciales.</li>
+          <li>Representación institucional y apoyo en negociaciones.</li>
+          <li>Coordinación con terceros para la operación comercial.</li>
+          <li>Fortalecimiento de relaciones estratégicas y de negocio.</li>
+        </ul>
+        <a href="index.html#contacto" class="modal-cta">Solicitar servicio</a>
+      `,
+    },
+    fiscal: {
+      title: "Asesoría fiscal y administrativa",
+      content: `
+        <p>Brindamos apoyo técnico y administrativo en materia contable, fiscal, mercantil y financiera para mejorar la estructura operativa y el cumplimiento normativo.</p>
+        <p>La finalidad es fortalecer la toma de decisiones con información clara y una administración más eficiente para cada organización.</p>
+        <ul>
+          <li>Supervisión técnica y administrativa de procesos.</li>
+          <li>Orientación en temas fiscales, contables y financieros.</li>
+          <li>Control y organización de la operación empresarial.</li>
+          <li>Apoyo para cumplir con obligaciones legales y administrativas.</li>
+        </ul>
+        <a href="index.html#contacto" class="modal-cta">Solicitar servicio</a>
+      `,
+    },
+    documentacion: {
+      title: "Gestión documental y operativa",
+      content: `
+        <p>Organizamos y coordinamos documentación, procesos internos y actividades operativas para mantener un flujo de trabajo eficiente y ordenado.</p>
+        <p>Este servicio permite mejorar la trazabilidad, la atención institucional y la administración cotidiana de las organizaciones.</p>
+        <ul>
+          <li>Coordinación de procesos administrativos y operativos.</li>
+          <li>Gestión documental y control de información.</li>
+          <li>Apoyo para la organización interna y la atención a clientes.</li>
+          <li>Supervisión operativa para optimizar tiempos y resultados.</li>
+        </ul>
+        <a href="index.html#contacto" class="modal-cta">Solicitar servicio</a>
+      `,
+    },
   };
 
   const openModal = (serviceKey) => {
