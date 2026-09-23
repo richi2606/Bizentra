@@ -1744,3 +1744,450 @@ body.dark-mode .privacy-content a:hover {
         font-size: 0.85rem !important;
     }
 }
+
+/* ============================================================
+   BOTONES "SABER MÁS" EN TARJETAS DE "¿QUÉ HACEMOS?"
+   ============================================================ */
+
+body .feature-card {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+body .feature-card .card-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    margin-top: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0.7rem 1.35rem !important;
+    background: transparent !important;
+    color: #0d6bb8 !important;
+    border: 2px solid #0d6bb8 !important;
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    text-decoration: none !important;
+    transition: all 0.25s ease !important;
+    align-self: flex-start !important;
+    cursor: pointer !important;
+    line-height: 1 !important;
+}
+
+body .feature-card .card-button i {
+    font-size: 0.8rem !important;
+    transition: transform 0.25s ease !important;
+    color: inherit !important;
+}
+
+body .feature-card .card-button:hover {
+    background: #0d6bb8 !important;
+    color: #ffffff !important;
+    border-color: #0d6bb8 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 18px rgba(13, 110, 184, 0.28) !important;
+}
+
+body .feature-card .card-button:hover i {
+    transform: translateX(4px) !important;
+    color: #ffffff !important;
+}
+
+/* Modo oscuro */
+html.dark-mode body .feature-card .card-button,
+body.dark-mode .feature-card .card-button {
+    color: #7cc0ff !important;
+    border-color: #7cc0ff !important;
+}
+
+html.dark-mode body .feature-card .card-button i,
+body.dark-mode .feature-card .card-button i {
+    color: #7cc0ff !important;
+}
+
+html.dark-mode body .feature-card .card-button:hover,
+body.dark-mode .feature-card .card-button:hover {
+    background: #7cc0ff !important;
+    color: #0d1e2e !important;
+    border-color: #7cc0ff !important;
+    box-shadow: 0 8px 18px rgba(124, 192, 255, 0.32) !important;
+}
+
+html.dark-mode body .feature-card .card-button:hover i,
+body.dark-mode .feature-card .card-button:hover i {
+    color: #0d1e2e !important;
+}
+
+/* Asegurar que el párrafo quede arriba del botón */
+body .feature-card p {
+    margin-bottom: 1.2rem !important;
+    flex-grow: 1 !important;
+}
+
+/* Modo claro forzado */
+html:not(.dark-mode) body .feature-card .card-button,
+html.light-mode body .feature-card .card-button {
+    color: #0d6bb8 !important;
+    border-color: #0d6bb8 !important;
+}
+
+html:not(.dark-mode) body .feature-card .card-button:hover,
+html.light-mode body .feature-card .card-button:hover {
+    background: #0d6bb8 !important;
+    color: #ffffff !important;
+}
+/* ============================================================
+   NOSOTROS - SECCIÓN "POR QUÉ CONFIRMAR EN NOSOTROS"
+   ============================================================ */
+
+body .trust-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.35rem !important;
+    margin-top: 2.25rem !important;
+}
+
+body .trust-card {
+    position: relative !important;
+    overflow: hidden !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+    border: 1px solid rgba(20, 39, 55, 0.12) !important;
+    border-radius: 22px !important;
+    padding: 2rem 1.6rem 1.7rem !important;
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    height: 100% !important;
+}
+
+body .trust-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary, #0d6bb8), var(--primary-soft, #194dcf), transparent);
+    opacity: 0.9;
+}
+
+body .trust-card:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 24px 36px rgba(15, 23, 42, 0.12) !important;
+    border-color: rgba(29, 79, 211, 0.25) !important;
+}
+
+html.dark-mode body .trust-card,
+body.dark-mode .trust-card {
+    background: linear-gradient(180deg, #122338 0%, #0d1b2b 100%) !important;
+    border-color: rgba(148, 163, 184, 0.18) !important;
+    box-shadow: 0 16px 28px rgba(2, 6, 23, 0.38) !important;
+    color: #eff7ff !important;
+}
+
+html.dark-mode body .trust-card:hover,
+body.dark-mode .trust-card:hover {
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.5) !important;
+    border-color: rgba(124, 192, 255, 0.35) !important;
+}
+
+body .trust-icon {
+    width: 68px !important;
+    height: 68px !important;
+    border-radius: 18px !important;
+    display: grid !important;
+    place-items: center !important;
+    margin-bottom: 1.15rem !important;
+    background: linear-gradient(135deg, rgba(13, 110, 184, 0.12), rgba(29, 79, 211, 0.08)) !important;
+    color: #0d6bb8 !important;
+}
+
+body .trust-icon i {
+    font-size: 1.65rem !important;
+    color: inherit !important;
+}
+
+html.dark-mode body .trust-icon,
+body.dark-mode .trust-icon {
+    background: linear-gradient(135deg, rgba(124, 192, 255, 0.18), rgba(148, 195, 255, 0.12)) !important;
+    color: #7cc0ff !important;
+}
+
+body .trust-card h3 {
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    color: #0d1e2e !important;
+    margin-bottom: 0.65rem !important;
+    line-height: 1.3 !important;
+}
+
+html.dark-mode body .trust-card h3,
+body.dark-mode .trust-card h3 {
+    color: #eff7ff !important;
+}
+
+body .trust-card p {
+    font-size: 0.92rem !important;
+    line-height: 1.7 !important;
+    color: #53657f !important;
+    margin: 0 !important;
+}
+
+html.dark-mode body .trust-card p,
+body.dark-mode .trust-card p {
+    color: #b7c7d9 !important;
+}
+
+/* Forzar modo claro */
+html:not(.dark-mode) body .trust-card,
+html.light-mode body .trust-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%) !important;
+    border-color: rgba(20, 39, 55, 0.12) !important;
+    color: #142737 !important;
+}
+
+html:not(.dark-mode) body .trust-card h3,
+html.light-mode body .trust-card h3 {
+    color: #0d1e2e !important;
+}
+
+html:not(.dark-mode) body .trust-card p,
+html.light-mode body .trust-card p {
+    color: #53657f !important;
+}
+
+html:not(.dark-mode) body .trust-icon,
+html.light-mode body .trust-icon {
+    background: linear-gradient(135deg, rgba(13, 110, 184, 0.12), rgba(29, 79, 211, 0.08)) !important;
+    color: #0d6bb8 !important;
+}
+
+/* ============================================================
+   NOSOTROS - CTA "¿QUIERES SABER CÓMO PODEMOS AYUDARTE?"
+   ============================================================ */
+
+body .nosotros-cta-section {
+    padding: 4.5rem 0 !important;
+}
+
+body .nosotros-cta {
+    max-width: 780px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding: 3rem 2.5rem !important;
+    background: linear-gradient(135deg, rgba(13, 110, 184, 0.08), rgba(29, 79, 211, 0.10)) !important;
+    border: 1px solid rgba(13, 110, 184, 0.18) !important;
+    border-radius: 26px !important;
+    box-shadow: 0 22px 56px rgba(15, 23, 42, 0.10) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+html.dark-mode body .nosotros-cta,
+body.dark-mode .nosotros-cta {
+    background: linear-gradient(135deg, rgba(124, 192, 255, 0.10), rgba(148, 195, 255, 0.06)) !important;
+    border-color: rgba(124, 192, 255, 0.25) !important;
+    box-shadow: 0 26px 65px rgba(2, 7, 20, 0.52) !important;
+}
+
+body .nosotros-cta h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem) !important;
+    font-weight: 800 !important;
+    color: #0d1e2e !important;
+    margin-bottom: 0.9rem !important;
+    line-height: 1.2 !important;
+}
+
+html.dark-mode body .nosotros-cta h2,
+body.dark-mode .nosotros-cta h2 {
+    color: #eff7ff !important;
+}
+
+body .nosotros-cta p {
+    font-size: 1rem !important;
+    line-height: 1.75 !important;
+    color: #53657f !important;
+    max-width: 560px !important;
+    margin: 0 auto 1.8rem !important;
+}
+
+html.dark-mode body .nosotros-cta p,
+body.dark-mode .nosotros-cta p {
+    color: #b7c7d9 !important;
+}
+
+body .nosotros-cta-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    min-height: 52px !important;
+    padding: 0.85rem 1.9rem !important;
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    text-decoration: none !important;
+    background: linear-gradient(135deg, #0d6bb8, #194dcf) !important;
+    color: #ffffff !important;
+    box-shadow: 0 12px 30px rgba(31, 88, 187, 0.34) !important;
+    transition: all 0.25s ease !important;
+}
+
+body .nosotros-cta-button:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 16px 36px rgba(31, 88, 187, 0.45) !important;
+}
+
+body .nosotros-cta-button i {
+    font-size: 1rem !important;
+    transition: transform 0.25s ease !important;
+}
+
+body .nosotros-cta-button:hover i {
+    transform: translateX(4px) !important;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    body .trust-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    body .trust-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    body .nosotros-cta {
+        padding: 2.2rem 1.5rem !important;
+        border-radius: 20px !important;
+    }
+
+    body .trust-card {
+        padding: 1.6rem 1.3rem 1.4rem !important;
+        border-radius: 18px !important;
+    }
+
+    body .trust-icon {
+        width: 58px !important;
+        height: 58px !important;
+    }
+
+    body .trust-icon i {
+        font-size: 1.4rem !important;
+    }
+}
+
+/* ============================================================
+   SERVICIOS - CTA "¿QUIERES SABER CÓMO PODEMOS AYUDARTE?"
+   ============================================================ */
+
+body .servicios-cta-section {
+    padding: 4.5rem 0 !important;
+}
+
+body .servicios-cta {
+    max-width: 780px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding: 3rem 2.5rem !important;
+    background: linear-gradient(135deg, rgba(13, 110, 184, 0.08), rgba(29, 79, 211, 0.10)) !important;
+    border: 1px solid rgba(13, 110, 184, 0.18) !important;
+    border-radius: 26px !important;
+    box-shadow: 0 22px 56px rgba(15, 23, 42, 0.10) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+html.dark-mode body .servicios-cta,
+body.dark-mode .servicios-cta {
+    background: linear-gradient(135deg, rgba(124, 192, 255, 0.10), rgba(148, 195, 255, 0.06)) !important;
+    border-color: rgba(124, 192, 255, 0.25) !important;
+    box-shadow: 0 26px 65px rgba(2, 7, 20, 0.52) !important;
+}
+
+body .servicios-cta h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem) !important;
+    font-weight: 800 !important;
+    color: #0d1e2e !important;
+    margin-bottom: 0.9rem !important;
+    line-height: 1.2 !important;
+}
+
+html.dark-mode body .servicios-cta h2,
+body.dark-mode .servicios-cta h2 {
+    color: #eff7ff !important;
+}
+
+body .servicios-cta p {
+    font-size: 1rem !important;
+    line-height: 1.75 !important;
+    color: #53657f !important;
+    max-width: 560px !important;
+    margin: 0 auto 1.8rem !important;
+}
+
+html.dark-mode body .servicios-cta p,
+body.dark-mode .servicios-cta p {
+    color: #b7c7d9 !important;
+}
+
+body .servicios-cta-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    min-height: 52px !important;
+    padding: 0.85rem 1.9rem !important;
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    text-decoration: none !important;
+    background: linear-gradient(135deg, #0d6bb8, #194dcf) !important;
+    color: #ffffff !important;
+    box-shadow: 0 12px 30px rgba(31, 88, 187, 0.34) !important;
+    transition: all 0.25s ease !important;
+}
+
+body .servicios-cta-button:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 16px 36px rgba(31, 88, 187, 0.45) !important;
+}
+
+body .servicios-cta-button i {
+    font-size: 1rem !important;
+    transition: transform 0.25s ease !important;
+}
+
+body .servicios-cta-button:hover i {
+    transform: translateX(4px) !important;
+}
+
+/* Forzar modo claro */
+html:not(.dark-mode) body .servicios-cta,
+html.light-mode body .servicios-cta {
+    background: linear-gradient(135deg, rgba(13, 110, 184, 0.08), rgba(29, 79, 211, 0.10)) !important;
+    border-color: rgba(13, 110, 184, 0.18) !important;
+}
+
+html:not(.dark-mode) body .servicios-cta h2,
+html.light-mode body .servicios-cta h2 {
+    color: #0d1e2e !important;
+}
+
+html:not(.dark-mode) body .servicios-cta p,
+html.light-mode body .servicios-cta p {
+    color: #53657f !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    body .servicios-cta {
+        padding: 2.2rem 1.5rem !important;
+        border-radius: 20px !important;
+    }
+}
